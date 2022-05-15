@@ -87,6 +87,8 @@ spec:
       labels:
         app: emoji-svc
         version: v11
+      annotations:
+        linkerd.io/inject: enabled
     spec:
       containers:
       - env:
