@@ -79,7 +79,7 @@ metadata:
   name: emoji
   namespace: emojivoto
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: emoji-svc
@@ -88,9 +88,7 @@ spec:
     metadata:
       labels:
         app: emoji-svc
-        version: v11
-      annotations:
-        linkerd.io/inject: enabled
+        version: v11      
     spec:
       containers:
       - env:
@@ -120,7 +118,7 @@ metadata:
   name: vote-bot
   namespace: emojivoto
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: vote-bot
@@ -130,8 +128,6 @@ spec:
       labels:
         app: vote-bot
         version: v11
-      annotations:
-        linkerd.io/inject: enabled
     spec:
       containers:
       - command:
@@ -155,7 +151,7 @@ metadata:
   name: voting
   namespace: emojivoto
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: voting-svc
@@ -165,8 +161,6 @@ spec:
       labels:
         app: voting-svc
         version: v11
-      annotations:
-        linkerd.io/inject: enabled
     spec:
       containers:
       - env:
@@ -196,7 +190,7 @@ metadata:
   name: web
   namespace: emojivoto
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: web-svc
@@ -206,8 +200,6 @@ spec:
       labels:
         app: web-svc
         version: v11
-      annotations:
-        linkerd.io/inject: enabled
     spec:
       containers:
       - env:
