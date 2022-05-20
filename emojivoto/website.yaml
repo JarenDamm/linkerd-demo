@@ -79,7 +79,7 @@ metadata:
   name: emoji
   namespace: emojivoto
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: emoji-svc
@@ -118,7 +118,7 @@ metadata:
   name: vote-bot
   namespace: emojivoto
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: vote-bot
@@ -151,7 +151,7 @@ metadata:
   name: voting
   namespace: emojivoto
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: voting-svc
@@ -190,7 +190,7 @@ metadata:
   name: web
   namespace: emojivoto
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: web-svc
